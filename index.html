@@ -8,5 +8,51 @@
   <body>
     <div id="app"></div>
   </body>
-  <script src="./script.js"></script>
+  <script>
+    /* 
+en introduksjonstekst om deg,
+en liste som viser noen av hobbyene dine,
+et bilde av deg
+en knapp du kan trykke på som endrer bakgrunnsfarge på noe på nettsiden.
+
+*/
+    let outputHtml = document.getElementById("app");
+
+    function displayHtml(backgroundColor) {
+      outputHtml.innerHTML = /*html*/ `
+        <div style="display:flex;margin-top:50px">
+        <div style="${backgroundColor}">
+        <h1 style="text-align:center">Hei👋🏽</h1>
+        <p>Jeg heter Mariama Kjellstrøm Touray, er 34 år, bosatt i Oslo med samboer og to katter🐈
+            <br />
+            Noen av mine hobbyer er:
+        </p>
+        <ul>
+            <li>Klikker trening med katt🐈‍⬛</li>
+            <li>Hekling🧶</li>
+            <li>Assassin's Creed🎮</li>
+            <li>Padlebrett🛶</li>
+        </ul>
+        <button onclick="setNewBackgroundColor()">Klikk for ny farge</button>
+
+        </div>
+        <div style="display:flex; margin:0 auto;">
+            <div>
+            <div>
+            <img src="./img/mariama.jpg" style="width:200px; border-radius:20px;"/>
+            </div>
+            <div>
+            </div>
+        </div>
+        </div>
+        </div>
+    `;
+    }
+
+    function setNewBackgroundColor(color) {
+      outputHtml.style.backgroundColor = "plum";
+    }
+
+    displayHtml("aquamarine");
+  </script>
 </html>
